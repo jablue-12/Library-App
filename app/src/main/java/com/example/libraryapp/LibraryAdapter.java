@@ -3,7 +3,6 @@ package com.example.libraryapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
@@ -86,7 +85,7 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.LibraryV
         LibraryItems item = libraryList.get(position);
         holder.bookImgView.setImageResource(item.getImageResource());
         holder.bookTitleTxtView.setText(item.getBook());
-        holder.bookPriceTxtView.setText("Pricee   : $" + item.getNumBooks());
+        holder.bookPriceTxtView.setText("Price: $" + item.getNumBooks());
 
 
 

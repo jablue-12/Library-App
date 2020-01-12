@@ -24,7 +24,7 @@ public class LibraryInfo extends AppCompatActivity {
         String author = item.getAuthor();
         String summary = item.getSummary();
         String date = item.getDate();
-        int copy = item.getNumBooks();
+        int copies = item.getNumBooks();
         int image = item.getImageResource();
 
         bookImgView = findViewById(R.id.itemImageView);
@@ -34,10 +34,10 @@ public class LibraryInfo extends AppCompatActivity {
         txtTitle.setText(title + " by " + author);
 
         txtDate = findViewById(R.id.dateTextView);
-        txtDate.append(date);
+        txtDate.setText(date);
 
         txtCopies = findViewById(R.id.copiesTextView);
-        txtCopies.append(" " + copy);
+        txtCopies.setText("Copies: " + copies);
 
         txtSummary = findViewById(R.id.summaryTextView);
         txtSummary.setText(summary + "\n" + summary);
