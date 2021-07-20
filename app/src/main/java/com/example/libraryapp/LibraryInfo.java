@@ -6,21 +6,27 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LibraryInfo extends AppCompatActivity {
 
     private TextView txtTitle,txtSummary, txtDate,txtCopies;
     private ImageView bookImgView;
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library_info);
         Intent intent =getIntent();
         LibraryItems item = intent.getParcelableExtra("Library item");
+        button = (Button) findViewById(R.id.button);
 
-        String title = item.getBook();
+
+        final String title = item.getBook();
         String author = item.getAuthor();
         String summary = item.getSummary();
         String date = item.getDate();
@@ -43,6 +49,12 @@ public class LibraryInfo extends AppCompatActivity {
         txtSummary.setText(summary + "\n" + summary);
         //scrollbar for the textview
         //txtSummary.setMovementMethod(new ScrollingMovementMethod());
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)  {
+                Toast.makeText(getBaseContext(), ("Borrowed the book " + title + " successfully." ), Toast.LENGTH_SHORT ).show();
+            }
+        });
 
 
     }

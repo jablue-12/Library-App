@@ -15,12 +15,6 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,14 +43,19 @@ public class   MainActivity extends AppCompatActivity {
         String summary = "Adaptation of the first of J.K. Rowling's popular children's novels about Harry Potter, a boy who learns on his eleventh birthday that he is the orphaned son of two powerful wizards and possesses unique magical powers of his own. He is summoned from his life as an unwanted child to become a student at Hogwarts, an English boarding school for wizards. There, he meets several friends who become his closest allies and help him discover the truth about his parents' mysterious deaths.";
 
         libraryList = new ArrayList<>();
-        for(int i = 0; i <8; i ++){
+        //for(int i = 0; i <8; i ++){
             libraryList.add(new LibraryItems(R.drawable.harry_potter,"J.K Rowling","Harry Potter",
                     5,summary,"05/12/2010"));
             libraryList.add(new LibraryItems(R.drawable.percy_jackson,"Rick Riordan","Percy Jackson",
                     10,summary,"02/20/2011"));
+            libraryList.add(new LibraryItems(R.drawable.dc_comics,"Daniel Wallace", "DC Comics Variant",2,
+                    summary,"04/24/2018"));
+            libraryList.add(new LibraryItems(R.drawable.spider_man,"Eichiro Oda", "Spider-Man",0,
+                    summary,"07/09/2019"));
             libraryList.add(new LibraryItems(R.drawable.onepiece,"Eichiro Oda", "One Piece",100,
                     summary,"01/01/1999"));
-        }
+
+        //}
 
 
 

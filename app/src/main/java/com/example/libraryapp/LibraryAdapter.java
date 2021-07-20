@@ -85,7 +85,7 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.LibraryV
         LibraryItems item = libraryList.get(position);
         holder.bookImgView.setImageResource(item.getImageResource());
         holder.bookTitleTxtView.setText(item.getBook());
-        holder.bookPriceTxtView.setText("Price: $" + item.getNumBooks());
+        holder.bookPriceTxtView.setText("Copies: " + item.getNumBooks());
 
 
 
